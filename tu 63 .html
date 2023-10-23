@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> inheritance and extends keyword in javascript </title>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        class animal {  // parent class
+            constructor(name, color) {
+                console.log(`the name of the animal is : ${name} and color is ${color}`);
+                this.name = name
+                this.color = color
+            }
+            cancel() {
+                console.log("animal is cancel");
+            }
+        }
+
+        class mankey extends animal {  // child class
+            submit() {
+                console.log("monkey is submitted");
+            }
+        }
+        
+        class picok extends animal {
+            submit() {
+                console.log("this is a picok class");
+            }
+        }
+
+
+        let arun = new picok("arun", "pink")
+        let harry = new mankey("anup", "red")
+
+        harry.cancel()
+        harry.submit()
+
+        arun.submit()
+
+
+    </script>
+</body>
+
+</html>
